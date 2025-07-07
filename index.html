@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Interactive Navbar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NavBar</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav id="navbar">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+    <div class="logo">MySite</div>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-item active">Home</a></li>
+      <li><a href="#about" class="nav-item">About</a></li>
+      <li><a href="#services" class="nav-item">Services</a></li>
+      <li><a href="#contact" class="nav-item">Contact</a></li>
     </ul>
   </nav>
 
-  <div class="content">
-    <h1>Scroll Down</h1>
-    <p>Keep scrolling to see the navbar change style.</p>
-    <p>Lorem ipsum dolor sit amet...</p>
-    <!-- Repeat this paragraph a few times to add scroll -->
-    <p>Lorem ipsum dolor sit amet...</p>
-    <p>Lorem ipsum dolor sit amet...</p>
-    <p>Lorem ipsum dolor sit amet...</p>
-  </div>
+  <!-- Page Sections -->
+  <section id="home" class="section">Home Section</section>
+  <section id="about" class="section">About Section</section>
+  <section id="services" class="section">Services Section</section>
+  <section id="contact" class="section">Contact Section</section>
 
   <script src="script.js"></script>
 </body>
 </html>
-
