@@ -1,17 +1,18 @@
 :root {
-  --pastel-pink: #fbd6d2;
-  --pastel-purple: #dcd3ff;
-  --pastel-blue: #d1ecf1;
-  --pastel-mint: #d8f3dc;
-  --hover-color: #ffe4f0;
-  --active-color: #ffcbde;
-  --dark-text: #444;
+  --pastel-sky: #cceeff;       /* Navbar */
+  --pastel-blue: #e0f7fa;      /* About */
+  --pastel-purple: #f0e5ff;    /* Services */
+  --pastel-mint: #ccffe5;      /* Home */
+  --pastel-peach: #fff5e6;     /* Contact */
+  --hover-color: #f0faff;      /* Nav hover */
+  --active-color: #b3e0ff;     /* Nav active */
+  --dark-text: #333;           /* Text color */
 }
 
 body {
   margin: 0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #fffafc;
+  background-color: #fdfefe;
   scroll-behavior: smooth;
 }
 
@@ -24,7 +25,7 @@ main {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--pastel-pink);
+  background-color: var(--pastel-sky);
   transition: all 0.3s ease;
   padding: 12px 0;
   z-index: 1000;
@@ -79,7 +80,7 @@ main {
 .nav-link.active {
   background-color: var(--active-color);
   color: #000;
-  box-shadow: 0 0 10px rgba(255, 192, 203, 0.4);
+  box-shadow: 0 0 10px rgba(179, 240, 255, 0.4);
 }
 
 /* Scroll effect */
@@ -98,10 +99,21 @@ section {
   transition: background-color 1s;
 }
 
-#home { background-color: var(--pastel-mint); }
-#about { background-color: var(--pastel-blue); }
-#services { background-color: var(--pastel-purple); }
-#contact { background-color: var(--pastel-pink); }
+#home {
+  background-color: var(--pastel-mint);     /* Mint green */
+}
+
+#about {
+  background-color: var(--pastel-blue);     /* Ice blue */
+}
+
+#services {
+  background-color: var(--pastel-purple);   /* Soft lavender */
+}
+
+#contact {
+  background-color: var(--pastel-peach);    /* Light peach */
+}
 
 /* Animations */
 @keyframes bounce {
