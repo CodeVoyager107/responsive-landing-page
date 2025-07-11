@@ -1,18 +1,17 @@
 :root {
-  --pastel-sky: #cceeff;       /* Navbar */
-  --pastel-blue: #e0f7fa;      /* About */
-  --pastel-purple: #f0e5ff;    /* Services */
-  --pastel-mint: #ccffe5;      /* Home */
-  --pastel-peach: #fff5e6;     /* Contact */
-  --hover-color: #f0faff;      /* Nav hover */
-  --active-color: #b3e0ff;     /* Nav active */
-  --dark-text: #333;           /* Text color */
+  --text-light: #ffffff;
+  --text-dark: #002b45;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #fdfefe;
+  background-color: #f0f8ff;
   scroll-behavior: smooth;
 }
 
@@ -20,12 +19,12 @@ main {
   margin-top: 70px;
 }
 
-/* Navbar */
+/* Navbar with gradient */
 #navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--pastel-sky);
+  background: linear-gradient(to right, #0077b6, #00b4d8); /* Gradient */
   transition: all 0.3s ease;
   padding: 12px 0;
   z-index: 1000;
@@ -46,7 +45,7 @@ main {
 
 .nav-link {
   text-decoration: none;
-  color: var(--dark-text);
+  color: var(--text-light);
   font-weight: bold;
   padding: 10px 18px;
   border-radius: 20px;
@@ -54,14 +53,12 @@ main {
   transition: all 0.3s ease;
 }
 
-/* Bouncy hover */
 .nav-link:hover {
-  background-color: var(--hover-color);
-  color: #000;
+  background-color: rgba(0, 119, 182, 0.3);
+  color: #fff;
   animation: bounce 0.5s ease;
 }
 
-/* Ripple click effect */
 .nav-link:active::after {
   content: '';
   position: absolute;
@@ -69,50 +66,51 @@ main {
   top: 50%;
   width: 10px;
   height: 10px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(1);
   animation: ripple 0.6s ease-out;
   pointer-events: none;
 }
 
-/* Active state */
 .nav-link.active {
-  background-color: var(--active-color);
-  color: #000;
-  box-shadow: 0 0 10px rgba(179, 240, 255, 0.4);
+  background-color: #023e8a;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 119, 182, 0.4);
 }
 
 /* Scroll effect */
 .scrolled {
-  background-color: var(--pastel-purple);
+  background: linear-gradient(to right, #005f99, #0077b6);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Section styles */
+/* Section styles with gradients */
 section {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
-  transition: background-color 1s;
+  transition: background 1s;
+  color: var(--text-dark);
 }
 
 #home {
-  background-color: var(--pastel-mint);     /* Mint green */
+  background: linear-gradient(to bottom right, #caf0f8, #ade8f4);
 }
 
 #about {
-  background-color: var(--pastel-blue);     /* Ice blue */
+  background: linear-gradient(to bottom right, #90e0ef, #48cae4);
 }
 
 #services {
-  background-color: var(--pastel-purple);   /* Soft lavender */
+  background: linear-gradient(to bottom right, #48cae4, #00b4d8);
 }
 
 #contact {
-  background-color: var(--pastel-peach);    /* Light peach */
+  background: linear-gradient(to bottom right, #00b4d8, #0077b6);
+  color: #fff;
 }
 
 /* Animations */
